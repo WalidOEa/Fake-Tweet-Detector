@@ -27,7 +27,7 @@ function verifySelectedTweet(tweet) {
     }
 
     // Define the API endpoint
-    const apiUrl = "http://localhost:5000/classify"; // Update with your hosted API endpoint
+    const apiUrl = "https://cryptic-dawn-30839-32e914b79bf8.herokuapp.com/"; // Update with your hosted API endpoint
 
     // Send the tweet to the API
     fetch(apiUrl, {

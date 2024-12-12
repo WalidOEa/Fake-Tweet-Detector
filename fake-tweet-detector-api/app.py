@@ -2,11 +2,13 @@ from flask import Flask, request, jsonify
 import joblib
 import numpy as np
 
+import os
+
 app = Flask(__name__)
 
 # Load the trained model and vectorizer
-model = joblib.load('knn_model.pkl')  # Load your trained KNN model
-vectorizer = joblib.load('vectorizer.pkl')  # Load the vectorizer (e.g., TfidfVectorizer)
+model = joblib.load('knn_model.pkl') 
+vectorizer = joblib.load('vectorizer.pkl') 
 
 @app.route('/classify', methods=['POST'])
 def classify_tweet():
@@ -28,5 +30,6 @@ def classify_tweet():
     
     return jsonify({'prediction': result})
 
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Get the port from environment or default to 5000
+    app.run(debug=False, host='0.0.0.0', port=port)
