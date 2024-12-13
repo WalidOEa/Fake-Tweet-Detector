@@ -27,7 +27,7 @@ function verifySelectedTweet(tweet) {
     }
 
     // Define the API endpoint
-    const apiUrl = "https://frozen-dawn-34203-d9899b04d146.herokuapp.com/"; // Update with your hosted API endpoint
+    const apiUrl = "https://fake-tweet-detector-e8bc3d290749.herokuapp.com/classify"; // Update with your hosted API endpoint
 
     // Send the tweet to the API
     fetch(apiUrl, {
