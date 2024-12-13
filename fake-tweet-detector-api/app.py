@@ -7,8 +7,8 @@ import os
 app = Flask(__name__)
 
 # Load the trained model and vectorizer
-model = joblib.load('knn_model.pkl') 
-vectorizer = joblib.load('vectorizer.pkl') 
+model = joblib.load('fake-tweet-detector-api/knn_model.pkl') 
+vectorizer = joblib.load('fake-tweet-detector-api/vectorizer.pkl') 
 
 @app.route('/classify', methods=['POST'])
 def classify_tweet():
