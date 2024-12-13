@@ -1,1 +1,1 @@
-web: python fake-tweet-detector-api/app.py:app
+web: python fake-tweet-detector-api/app.py
