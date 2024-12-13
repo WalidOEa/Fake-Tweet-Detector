@@ -1,9 +1,9 @@
 // Create a context menu for right-clicking
 chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create({
-        id: "verify-tweet", // Unique ID for the menu item
-        title: "Verify", // Text displayed in the menu
-        contexts: ["selection"] // Context where the menu appears (selected text)
+        id: "verify-tweet", 
+        title: "Verify",
+        contexts: ["selection"]
     });
 });
 
@@ -14,7 +14,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         chrome.scripting.executeScript({
             target: { tabId: tab.id },
             func: verifySelectedTweet,
-            args: [info.selectionText] // Pass the selected text
+            args: [info.selectionText]
         });
     }
 });
@@ -27,7 +27,7 @@ function verifySelectedTweet(tweet) {
     }
 
     // Define the API endpoint
-    const apiUrl = "https://fake-tweet-detector-e8bc3d290749.herokuapp.com/classify"; // Update with your hosted API endpoint
+    const apiUrl = "https://fake-tweet-detector-e8bc3d290749.herokuapp.com/classify";
 
     // Send the tweet to the API
     fetch(apiUrl, {

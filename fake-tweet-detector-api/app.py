@@ -5,7 +5,7 @@ import numpy as np
 import os
 
 app = Flask(__name__)
-CORS(app)  # This will allow all origins to make requests to your API
+CORS(app)
 
 # Load the trained model and vectorizer
 model = joblib.load('fake-tweet-detector-api/knn_model.pkl')
