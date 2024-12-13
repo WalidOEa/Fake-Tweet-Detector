@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Fake Tweet Detector",
   "version": "1.0",
-  "description": "Verify if a tweet is real or fake using a machine learning.",
+  "description": "Verify if a tweet is real or fake",
   "permissions": ["contextMenus", "scripting", "activeTab", "notifications"],
   "background": {
     "service_worker": "background.js"
