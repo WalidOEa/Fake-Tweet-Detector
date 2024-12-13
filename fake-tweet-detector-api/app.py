@@ -8,8 +8,8 @@ app = Flask(__name__)
 CORS(app)  # This will allow all origins to make requests to your API
 
 # Load the trained model and vectorizer
-model = joblib.load('knn_model.pkl')
-vectorizer = joblib.load('vectorizer.pkl')
+model = joblib.load('fake-tweet-detector-api/knn_model.pkl')
+vectorizer = joblib.load('fake-tweet-detector-api/vectorizer.pkl')
 
 @app.route('/classify', methods=['POST'])
 def classify_tweet():
