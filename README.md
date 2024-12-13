@@ -6,10 +6,10 @@ As the tool if not 100% accurate, there may be cases of false positives or false
 
 ## How To Run
 To run this extension, first
-- Download the _fake-tweet-detector-extension_ package
+-  Download the GitHub repository
 -  Type _chrome://extensions_ in the address bar
 -  Select _Load unpacked_
--  Select the _fake-tweet-detector-extension_ package which contains a _background.js_ and _manifest.json_
+-  Select the _fake-tweet-detector-extension_ package which contains a _background.js_ and _manifest.json_ in the unzipped repository
 
 ## How To Use
 On X/Twitter, highlight a tweet and rightclick. On the drop down menu, select _verify_. A notification will appear indicating that a tweet is predicated as real or fake.
